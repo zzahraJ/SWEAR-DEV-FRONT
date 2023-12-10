@@ -1,13 +1,12 @@
 <script setup>
-
+import Nav from "./components/Nav.vue";
 </script>
 
 <template>
-  <div>
-   APP
+  <div class="app-container bg-[#68ff47] min-h-screen">
+    <Nav />
+    <router-view></router-view>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
