@@ -1,12 +1,12 @@
-<<script setup>
+<script setup>
 
 </script>
-    template>
+<template>
     <div>
      HOME
     </div>
-  </template>
+</template>
   
-  <style scoped>
+<style scoped>
   
-  </style>
+</style>
