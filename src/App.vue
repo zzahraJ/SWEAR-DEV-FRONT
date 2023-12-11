@@ -3,7 +3,7 @@ import Nav from "./components/Nav.vue";
 </script>
 
 <template>
-  <div class="app-container bg-[#68ff47] min-h-screen">
+  <div class="app-container bg-[#F2F2F2] min-h-screen">
     <Nav />
     <router-view></router-view>
   </div>
