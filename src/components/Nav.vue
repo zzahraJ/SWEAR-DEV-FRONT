@@ -8,7 +8,7 @@
                 to="/">Home
             </router-link>
             <router-link class="nav-link mx-4 font-bold text-black hover:text-hite text-lg md:text-xl"
-                to="/">Configurator
+                to="/configurator">Configurator
             </router-link>
             <router-link class="nav-link mx-4 font-bold text-black hover:text-hite text-lg md:text-xl"
                 to="/admin">Login
