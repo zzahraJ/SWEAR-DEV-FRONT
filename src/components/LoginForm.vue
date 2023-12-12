@@ -10,25 +10,34 @@ const password = ref('');
 const error = ref('');
 
 const Login = async () => {
-    const response = await fetch('http://localhost:3000/api/v1/users/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            username: username.value,
-            password: password.value,
-        }),
-    });
+    try {
+        const response = await fetch('http://localhost:3000/api/v1/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: username.value,
+                password: password.value,
+            }),
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (response.ok) {
-        localStorage.setItem('token', data.data.token);
-        //check the value stored in localstorage
-        router.push('/orders');
-    } else {
-        error.value = data.message;
+        if (response.ok) {
+            if (data.data && data.data.token) {
+                localStorage.setItem('token', data.data.token);
+                router.push('/orders');
+            } else {
+                console.error('Unexpected response format:', data);
+                error.value = 'Invalid server response';
+            }
+        } else {
+            error.value = data.message || 'Unknown error';
+        }
+    } catch (error) {
+        console.error('An error occurred during login:', error);
+        error.value = 'An error occurred. Please try again.';
     }
 };
 
