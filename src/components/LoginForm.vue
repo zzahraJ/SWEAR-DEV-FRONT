@@ -5,7 +5,7 @@ import {useRouter} from "vue-router";
 
 const router = useRouter();
 
-const email = ref('');
+const username = ref('');
 const password = ref('');
 const error = ref('');
 
@@ -16,7 +16,7 @@ const Login = async () => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            user_mail: email.value,
+            username: username.value,
             password: password.value,
         }),
     });
