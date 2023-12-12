@@ -7,13 +7,16 @@
             <router-link class="nav-link mx-4 font-bold text-green-400 hover:text-hite text-lg md:text-xl"
                 to="/">Home
             </router-link>
+
             <router-link class="nav-link mx-4 font-bold text-green-400 hover:text-hite text-lg md:text-xl"
-                to="/configurator">Configurator
+                to="/login">Login
             </router-link>
+
             <router-link class="nav-link mx-4 font-bold text-green-400 hover:text-hite text-lg md:text-xl"
-                to="/admin">Login
+                to="/orders">Orders
             </router-link>
         </div>
+       
     </nav>
 </template>
   
