@@ -30,7 +30,7 @@ const Login = async () => {
                 router.push('/orders');
             } else {
                 console.error('Unexpected response format:', data);
-                error.value = 'Password or username is wrong';
+                error.value = 'Username or Password is wrong';
             }
         } else {
             error.value = data.message || 'Unknown error';
@@ -44,27 +44,31 @@ const Login = async () => {
 </script>
 
 <template>
-      <form @submit.prevent="Login">
+    <div class="flex items-center justify-center h-screen bg-stone-400">
+      <form @submit.prevent="Login" class="bg-white p-8 rounded shadow-md w-2/5">
         <div class="mb-[32px]">
-            <div class="mb-4">
-                <label for="Username" class="block text-gray-600 text-sm font-semibold mb-2">Username</label>
-                <input v-model="username" type="text" id="username"
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-[#69FF47]" />
-            </div>
-            <div class="mb-4">
-                <label for="password" class="block text-gray-600 text-sm font-semibold mb-2">Password</label>
-                <input v-model="password" type="password" id="password"
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-[#69FF47]" />
-                    <router-link to="/updatePassword">Forgot password?</router-link>
-            </div>
+          <div class="mb-4">
+            <label for="Username" class="block text-gray-600 text-sm font-semibold mb-2">Username</label>
+            <input v-model="username" type="text" id="username"
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-400"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-gray-600 text-sm font-semibold mb-2">Password</label>
+            <input v-model="password" type="password" id="password"
+              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-400"
+            />
+            <router-link to="/updatePassword">Forgot password?</router-link>
+          </div>
         </div>
         <div v-if="error" class="text-red-500 mb-4 text-xs">{{ error }}</div>
-        
+  
         <button type="submit"
-            class="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-green-400 focus:outline-none focus:ring focus:border-green-500">
-            Log in
+          class="w-full bg-green-400 text-white py-2 px-4 rounded-md hover:bg-black focus:outline-none focus:border-green-500">
+          Log in
         </button>
-    </form>
-</template>
+      </form>
+    </div>
+  </template>
 
 <style scoped></style>
