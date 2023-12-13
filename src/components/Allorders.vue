@@ -19,8 +19,6 @@ const getOrders = async () => {
     if (response.ok) {
       const data = await response.json();
       orders.value = data; // Assuming the response is an array of orders
-      console.log(data);
-      
     } else {
       console.error('Failed to fetch orders:', response.statusText);
     }
@@ -32,22 +30,26 @@ const getOrders = async () => {
 onMounted(() => {
   getOrders();
 });
+
+const goToOrderDetails = (orderId) => {
+  router.push(`/orderDetails/${orderId}`);
+};
 </script>
 
 <template>
-    <div>
-      <h1>ALL ORDERS</h1>
-      <div class="order-cards">
-        <div v-for="order in orders.data.sneakers" :key="order._id" class="order-card">
-          <!-- Display order details here -->
-          <h2>Username:{{ order.username }}</h2>
-          <p>Email: {{ order.email }}</p>
-          <p>Size: {{ order.size }}</p>
-          <!-- Add more details as needed -->
-        </div>
+  <div>
+    <h1>ALL ORDERS</h1>
+    <div class="order-cards">
+      <div v-for="order in orders.data?.sneakers" :key="order._id" class="order-card">
+        <h2>{{ order.username }}</h2>
+        <p>Email: {{ order.email }}</p>
+        <p>Size: {{ order.size }}</p>
+        <!-- Button to go to OrderDetails page -->
+        <button @click="goToOrderDetails(order._id)">OrderDetails</button>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
 <style scoped>
 .order-cards {
