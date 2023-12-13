@@ -30,7 +30,7 @@ const Login = async () => {
                 router.push('/orders');
             } else {
                 console.error('Unexpected response format:', data);
-                error.value = 'Invalid server response';
+                error.value = 'Password or username is wrong';
             }
         } else {
             error.value = data.message || 'Unknown error';
