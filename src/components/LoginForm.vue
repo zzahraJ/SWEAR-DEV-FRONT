@@ -50,13 +50,13 @@ const Login = async () => {
           <div class="mb-4">
             <label for="Username" class="block text-gray-600 text-sm font-semibold mb-2">Username</label>
             <input v-model="username" type="text" id="username"
-              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-400"
+              class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-gray-950"
             />
           </div>
           <div class="mb-4">
             <label for="password" class="block text-gray-600 text-sm font-semibold mb-2">Password</label>
             <input v-model="password" type="password" id="password"
-              class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-green-400"
+                class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-gray-950"
             />
             <router-link to="/updatePassword">Forgot password?</router-link>
           </div>
