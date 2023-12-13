@@ -38,6 +38,16 @@ onMounted(() => {
   <div>
     <h2>Order Details</h2>
     <p>Username: {{ orderDetails.username }}</p>
+    <p>Email: {{ orderDetails.email }}</p>
+    <p>Size: {{ orderDetails.size }}</p>
+    <p>Laces: {{ orderDetails.laces }}</p>
+    <p>Inside: {{ orderDetails.inside }}</p>
+    <p>Outside_1: {{ orderDetails.outside_1 }}</p>
+    <p>Outside_2: {{ orderDetails.outside_2 }}</p>
+    <p>Outside_3: {{ orderDetails.outside_3 }}</p>
+    <p>Sole bottom: {{ orderDetails.sole_bottom }}</p>
+    <p>Sole top: {{ orderDetails.texture }}</p>
+    <p>Price: {{ orderDetails.price }}</p>
     <!-- Display other order details here -->
   </div>
 </template>
