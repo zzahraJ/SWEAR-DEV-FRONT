@@ -38,30 +38,25 @@ const goToOrderDetails = (orderId) => {
 
 <template>
   <div>
-    <h1>ALL ORDERS</h1>
-    <div class="order-cards">
-      <div v-for="order in orders.data?.sneakers" :key="order._id" class="order-card">
-        <h2>{{ order.username }}</h2>
-        <p>Email: {{ order.email }}</p>
-        <p>Size: {{ order.size }}</p>
+    <h1 class="text-2xl font-semibold mb-4">ALL ORDERS</h1>
+    <div class="flex flex-wrap -mx-4">
+      <div v-for="order in orders.data?.sneakers" :key="order._id" class="order-card mx-4 mb-4 p-4 border rounded-md shadow-md w-64 h-64">
+        <h2 class="text-lg font-semibold">{{ order.username }}</h2>
+        <div class="mb-2">
+          <p class="font-semibold">Email:</p>
+          <p>{{ order.email }}</p>
+        </div>
+        <p class="mb-2">Size: {{ 'Size: ' + order.size }}</p>
         <!-- Button to go to OrderDetails page -->
-        <button @click="goToOrderDetails(order._id)">OrderDetails</button>
+        <button @click="goToOrderDetails(order._id)" class="bg-green-400 text-white px-4 py-2 rounded-md focus:outline-none hover:bg-green-600 mt-4">
+          Order Details
+        </button>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.order-cards {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.order-card {
-  border: 1px solid blue;
-  padding: 10px;
-  margin: 10px;
-  width: 200px; /* Adjust as needed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
+<style scoped>
 </style>
