@@ -12,7 +12,7 @@ const error = ref('');
 const changePassword = async () => {
     try {
         const response = await fetch('http://localhost:3000/api/v1/users/change-password', {
-            method: 'PATCH', // Use PATCH for updating resources
+            method: 'POST', // Use PATCH for updating resources
             headers: {
                 'Content-Type': 'application/json',
             },
