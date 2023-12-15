@@ -40,67 +40,108 @@ onMounted(() => {
     <div class="bg-white p-4 rounded-md shadow-md">
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Username:
+          <span class="font-black">Username:</span>
           <span class="ml-2">{{ orderDetails.username }}</span>
         </p>
       </div>
       <div class="mb-4">
-        <p class="text-lg font-semibold">
-          Email:
+        <p class="text-lg font-semibold ">
+          <span class="font-black"> Email: </span>
           <span class="ml-2">{{ orderDetails.email }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Size:
+          <span class="font-black">Size:</span>
           <span class="ml-2">{{ orderDetails.size }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Laces:
-          <span class="ml-2">{{ orderDetails.laces }}</span>
+          <span class="font-black">Laces color:</span>
+          <span class="ml-2">{{ orderDetails.laces_color }}</span>
+        </p>
+      </div><div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Laces texture:</span>
+          <span class="ml-2">{{ orderDetails.laces_texture }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Inside:
-          <span class="ml-2">{{ orderDetails.inside }}</span>
+          <span class="font-black">Inside color:</span>
+          <span class="ml-2">{{ orderDetails.inside_color }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Outside_1:
-          <span class="ml-2">{{ orderDetails.outside_1 }}</span>
+          <span class="font-black">Inside texture:</span>
+          <span class="ml-2">{{ orderDetails.inside_texture }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Outside_2:
-          <span class="ml-2">{{ orderDetails.outside_2 }}</span>
+          <span class="font-black">Outside 1 color:</span>
+          <span class="ml-2">{{ orderDetails.outside_1_color }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Outside_3:
-          <span class="ml-2">{{ orderDetails.outside_3 }}</span>
+          <span class="font-black">Outside 1 texture:</span>
+          <span class="ml-2">{{ orderDetails.outside_1_texture }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Sole bottom:
-          <span class="ml-2">{{ orderDetails.sole_bottom }}</span>
+          <span class="font-black">Outside 2 color:</span>
+          <span class="ml-2">{{ orderDetails.outside_2_color }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Sole top:
-          <span class="ml-2">{{ orderDetails.texture }}</span>
+          <span class="font-black">Outside 2 texture:</span>
+          <span class="ml-2">{{ orderDetails.outside_2_texture }}</span>
         </p>
       </div>
       <div class="mb-4">
         <p class="text-lg font-semibold">
-          Price:
+          <span class="font-black">Outside 3 color:</span>
+          <span class="ml-2">{{ orderDetails.outside_3_color }}</span>
+        </p>
+      </div>
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Outside 3 texture:</span>
+          <span class="ml-2">{{ orderDetails.outside_3_texture }}</span>
+        </p>
+      </div>
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Sole bottom color:</span>
+          <span class="ml-2">{{ orderDetails.sole_bottom_color }}</span>
+        </p>
+      </div>
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Sole bottom texture:</span>
+          <span class="ml-2">{{ orderDetails.sole_bottom_texture }}</span>
+        </p>
+      </div>
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Sole top color:</span>
+          <span class="ml-2">{{ orderDetails.sole_top_color }}</span>
+        </p>
+      </div>
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Sole top texture:</span>
+          <span class="ml-2">{{ orderDetails.sole_top_texture }}</span>
+        </p>
+      </div>
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Price:</span>
           <span class="ml-2">{{ orderDetails.price }}</span>
         </p>
       </div>
