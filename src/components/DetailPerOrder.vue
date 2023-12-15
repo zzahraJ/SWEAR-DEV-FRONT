@@ -35,8 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-4">
-    <h2 class="text-2xl font-semibold mb-4">Order Details</h2>
+  <div class="p-0">
     <div class="bg-white p-4 rounded-md shadow-md">
       <div class="mb-4">
         <p class="text-lg font-semibold">
