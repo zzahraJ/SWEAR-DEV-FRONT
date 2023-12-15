@@ -2,7 +2,7 @@ import{createRouter,createWebHistory} from 'vue-router';
 import Login from '../views/Login.vue';
 import Orders from '../views/Orders.vue';
 import OrderDetails from '../views/OrderDetails.vue';
-// import updatePassword from '../views/UpdatePassword.vue';
+import ChangePassword from '../views/ChangePassword.vue';
 //import Configurator from '../views/Configurator.vue';
 
 const routes = [
@@ -10,8 +10,7 @@ const routes = [
     {path: '/', component: Login},
     {path: '/orders', component: Orders},
     {path: '/orderDetails/:id', component: OrderDetails},
-    
-    // {path: '/UpdatePassword', component: updatePassword},
+    {path: '/updatePassword', component: ChangePassword},
     // {path: '/orders/:id', component: Details},
 
     //{path: "/configurator", component: Configurator},
