@@ -29,6 +29,27 @@ const getOrderDetails = async (orderId) => {
   }
 };
 
+// delete order with this id
+const deleteOrder = async (orderId) => {
+  try {
+    const response = await fetch(`http://localhost:3000/api/v1/sneakers/${props.orderId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+
+    if (response.ok) {
+      router.push('/orders');
+    } else {
+      console.error('Failed to delete order:', response.statusText);
+    }
+  } catch (error) {
+    console.error('An error occurred during order delete:', error);
+  }
+};
+
 onMounted(() => {
   getOrderDetails(props.orderId);
 });
@@ -144,8 +165,8 @@ onMounted(() => {
           <span class="ml-2">{{ orderDetails.price }}</span>
         </p>
       </div>
-      <!-- Add more order details as needed -->
     </div>
+    <button @click="deleteOrder" class="bg-red-500 text-white px-4 py-2 rounded-md mt-4">Delete order</button>
   </div>
 </template>
 
