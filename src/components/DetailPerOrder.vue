@@ -169,7 +169,7 @@ onMounted(() => {
       <div class="mb-4">
         <p class="text-lg font-semibold">
           <span class="font-black">Status</span>
-          <span class="ml-2">{{ orderDetails.status }}</span>
+          <span class="ml-2">{{ orderDetails.statusShoe }}</span>
         </p>
       </div>
     </div>
