@@ -47,6 +47,7 @@ const Login = async () => {
     <div class="flex items-center justify-center min-h-screen bg-stone-400">
       <form @submit.prevent="Login" class="bg-white p-8 rounded shadow-md w-2/5">
         <div class="mb-[32px]">
+            <h2 class="flex items-center justify-center text-xl m-4">Login</h2>
           <div class="mb-4">
             <label for="Username" class="block text-gray-600 text-sm font-semibold mb-2">Username</label>
             <input v-model="username" type="text" id="username"
@@ -58,7 +59,6 @@ const Login = async () => {
             <input v-model="password" type="password" id="password"
               class="w-full px-4 py-2 border border-black rounded-md focus:outline-none focus:border-gray-950"
             />
-            <router-link to="/updatePassword">Forgot password?</router-link>
           </div>
         </div>
         <div v-if="error" class="text-red-500 mb-4 text-xs">{{ error }}</div>
@@ -69,6 +69,6 @@ const Login = async () => {
         </button>
       </form>
     </div>
-  </template>
+</template>
 
 <style scoped></style>
