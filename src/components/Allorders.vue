@@ -6,6 +6,11 @@ const router = useRouter();
 const token = localStorage.getItem('token');
 const orders = ref([]);
 
+const formatDate = (date) => {
+  const dateObj = { timeZone: 'Europe/Brussels', dateStyle: 'long', timeStyle: 'short' };
+  return new Intl.DateTimeFormat('en-US', dateObj).format(new Date(date));
+}
+
 const getOrders = async () => {
   try {
     const response = await fetch('http://localhost:3000/api/v1/sneakers', {
@@ -47,6 +52,7 @@ const goToOrderDetails = (orderId) => {
           <p>{{ order.email }}</p>
         </div>
         <p class="mb-2">{{ 'Size: ' + order.size }}</p>
+        <p>{{ 'Date: ' + formatDate(order.date) }}</p>
         <!-- Button to go to OrderDetails page -->
         <button @click="goToOrderDetails(order._id)" class="bg-green-400 text-white px-4 py-2 rounded-md focus:outline-none hover:bg-green-600 mt-4">
           Order Details

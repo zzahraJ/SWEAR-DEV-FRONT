@@ -165,6 +165,13 @@ onMounted(() => {
           <span class="ml-2">{{ orderDetails.price }}</span>
         </p>
       </div>
+
+      <div class="mb-4">
+        <p class="text-lg font-semibold">
+          <span class="font-black">Status</span>
+          <span class="ml-2">{{ orderDetails.status }}</span>
+        </p>
+      </div>
     </div>
     <button @click="deleteOrder" class="bg-red-500 text-white px-4 py-2 rounded-md mt-4">Delete order</button>
   </div>
