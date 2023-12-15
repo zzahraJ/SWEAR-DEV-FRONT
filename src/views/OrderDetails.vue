@@ -9,7 +9,7 @@ const orderId = computed(() => route.params.id);
 
 <template>
   <div class="p-4">
-    <h2 class="text-2xl font-semibold mb-4">Order Details</h2>
+    <h2 class="text-2xl font-semibold mb-4 text-center m-2">Order Details</h2>
     <div class="bg-green-400 p-4 mx-8 my-8 rounded-md shadow-md">
       <div class="mb-4">
         <p class="text-lg font-semibold">
