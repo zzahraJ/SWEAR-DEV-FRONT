@@ -79,7 +79,6 @@ const goToOrderDetails = (orderId) => {
 
 
 <!-- 
-  jarne
   <script setup>
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
