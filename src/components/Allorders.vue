@@ -5,15 +5,45 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const token = localStorage.getItem('token');
 const orders = ref([]);
+let socket = null;
+
+
+
+
+onMounted(() => {
+  getOrders();
+  socket = new WebSocket('ws://localhost:3000/primus');
+
+  socket.onmessage = (event) => {
+    console.log("dit werkt tot hier")
+    console.log(event);
+
+
+    let newOrder = JSON.parse(event.data);
+    console.log(newOrder);
+
+    if(newOrder.action === "add") {
+      // add date to new order
+      newOrder.date = new Date();
+      // add new order to orders
+      orders.value.data.sneakers.push(newOrder);
+    }
+
+
+  }
+});
 
 const formatDate = (date) => {
+  console.log('Original date:', date);
+
   if (!date || isNaN(new Date(date).getTime())) {
+    console.log('Invalid date:', date);
     return 'Invalid Date';
   }
 
   const dateObj = { timeZone: 'Europe/Brussels', dateStyle: 'long', timeStyle: 'short' };
   return new Intl.DateTimeFormat('en-US', dateObj).format(new Date(date));
-}
+};
 
 const getOrders = async () => {
   try {
@@ -36,11 +66,6 @@ const getOrders = async () => {
     console.error('An error occurred during order fetch:', error);
   }
 };
-
-onMounted(() => {
-  getOrders();
-});
-
 const goToOrderDetails = (orderId) => {
   router.push(`/orderDetails/${orderId}`);
 };

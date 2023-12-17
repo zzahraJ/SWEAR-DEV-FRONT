@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "primus": "^8.0.9",
     "tailwind": "^4.0.0",
     "vue": "^3.3.8",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "ws": "^8.15.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
