@@ -56,7 +56,7 @@ const goToOrderDetails = (orderId) => {
           <p class="font-semibold">Email:</p>
           <p>{{ order.email }}</p>
         </div>
-        <p class="mb-2">{{ 'Size: ' + order.size }}</p>
+        <!-- <p class="mb-2">{{ 'Size: ' + order.size }}</p> -->
         <p>{{ order.statusShoe }}</p>
         <p>{{ 'Date: ' + formatDate(order.date) }}</p>
         <!-- Button to go to OrderDetails page -->
