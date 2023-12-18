@@ -15,12 +15,12 @@ onMounted(() => {
   socket = new WebSocket('ws://localhost:3000/primus');
 
   socket.onmessage = (event) => {
-    console.log("dit werkt tot hier")
-    console.log(event);
+    // console.log("dit werkt tot hier")
+    // console.log(event);
 
 
     let newOrder = JSON.parse(event.data);
-    console.log(newOrder);
+    // console.log(newOrder);
 
     if(newOrder.action === "add") {
       // add date to new order
@@ -34,7 +34,7 @@ onMounted(() => {
 });
 
 const formatDate = (date) => {
-  console.log('Original date:', date);
+  // console.log('Original date:', date);
 
   if (!date || isNaN(new Date(date).getTime())) {
     console.log('Invalid date:', date);
@@ -57,7 +57,7 @@ const getOrders = async () => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log('Orders:', data);
+      // console.log('Orders:', data);
       orders.value = data;
     } else {
       console.error('Failed to fetch orders:', response.statusText);
