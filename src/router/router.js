@@ -6,8 +6,8 @@ import ChangePassword from '../views/ChangePassword.vue';
 
 const routes = [
     {path: '/', component: Login},
-    {path: '/orderDetails/:id', component: OrderDetails},
     {path: '/orders', component: Orders},
+    {path: '/orderDetails/:id', component: OrderDetails},
     {path: '/updatePassword', component: ChangePassword},
 ];
 
