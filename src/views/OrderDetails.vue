@@ -1,8 +1,8 @@
 <script setup>
+import StatusUpdate from '../components/StatusUpdate.vue';
 import DetailPerOrder from '../components/DetailPerOrder.vue';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import StatusUpdate from '../components/StatusUpdate.vue';
 
 const route = useRoute();
 const orderId = computed(() => route.params.id);
@@ -18,8 +18,8 @@ const orderId = computed(() => route.params.id);
           <span class="ml-2">{{ orderId }}</span>
         </p>
       </div>
-      <DetailPerOrder :orderId="orderId" />
       <StatusUpdate :orderId="orderId" />
+      <DetailPerOrder :orderId="orderId" />
     </div>
   </div>
 </template>
