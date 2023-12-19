@@ -28,7 +28,7 @@ onMounted(() => {
 
 const getOrderDetails = async (orderId) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/sneakers/${orderId}`, {
+    const response = await fetch(`https://swear-dev-back.onrender.com/api/v1/sneakers/${orderId}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const getOrderDetails = async (orderId) => {
 // delete order with this id
 const deleteOrder = async (orderId) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/v1/sneakers/${props.orderId}`, {
+    const response = await fetch(`https://swear-dev-back.onrender.com/api/v1/sneakers/${props.orderId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

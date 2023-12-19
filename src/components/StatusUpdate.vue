@@ -9,7 +9,7 @@
   let orderId = ref(props.orderId);  
 
   onMounted(() => {
-    socket = new WebSocket("ws://localhost:3000/primus");
+    socket = new WebSocket("wss://swear-dev-back.onrender.com/primus");
   });
   
   const statusShoe = ref("Change status");
@@ -19,7 +19,7 @@
   const StatusUpdate = async () => {
     try {
         console.log(orderId.value);
-        const response = await fetch(`http://localhost:3000/api/v1/sneakers/${orderId.value}`, {
+        const response = await fetch(`https://swear-dev-back.onrender.com/api/v1/sneakers/${orderId.value}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

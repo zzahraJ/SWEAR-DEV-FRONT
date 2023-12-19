@@ -12,7 +12,7 @@ let socket = null;
 
 onMounted(() => {
   getOrders();
-  socket = new WebSocket('ws://localhost:3000/primus');
+  socket = new WebSocket('wss://swear-dev-back.onrender.com/primus');
 
   socket.onmessage = (event) => {
 
@@ -44,7 +44,7 @@ const formatDate = (date) => {
 
 const getOrders = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/sneakers', {
+    const response = await fetch('https://swear-dev-back.onrender.com/api/v1/sneakers', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ const error = ref('');
 
 const changePassword = async () => {
     try {
-        const response = await fetch('http://localhost:3000/api/v1/users/change-password', {
+        const response = await fetch('https://swear-dev-back.onrender.com/api/v1/users/change-password', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
