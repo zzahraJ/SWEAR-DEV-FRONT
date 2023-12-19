@@ -18,8 +18,6 @@ onMounted(() => {
   <div>
     <template v-if="token">
       <Allorders />
-
-      <!-- Your orders content goes here -->
     </template>
     <template v-else>
       <p>Please login first to access orders.</p>
@@ -29,5 +27,4 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Your styles go here */
 </style>
