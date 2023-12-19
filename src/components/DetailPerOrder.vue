@@ -11,7 +11,7 @@ let socket = null;
 
 onMounted(() => {
   getOrderDetails(props.orderId);
-  socket = new WebSocket("ws://localhost:3000/primus");
+  socket = new WebSocket("wss://swear-dev-back.onrender.com/primus");
   // console.log("this is socket", socket);  
   
   socket.onmessage = (event) => {
