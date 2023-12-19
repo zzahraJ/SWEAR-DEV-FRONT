@@ -61,8 +61,8 @@
       class="p-2 border-5 border-green-400 rounded focus:outline-none bg-green-200 hover:bg-green-200 focus:border-green-400 font-bold mr-10"
     >
       <option value="Change status" selected disabled>Change status</option>
-      <option value="Produced">Ready to be produced</option>
-      <option value="Pending">Waiting to be shipped</option>
+      <option value="Produced">Produced</option>
+      <option value="Pending">Pending</option>
       <option value="Shipped">Shipped</option>
     </select>
   </div>
